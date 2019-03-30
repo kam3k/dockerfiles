@@ -23,6 +23,7 @@ RUN GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git clone git@github.com:k
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
 RUN /home/mgallant/.dot/install_packages.sh
+RUN /home/mgallant/.dot/install_gui_packages.sh
 USER mgallant
 RUN /home/mgallant/.dot/post_install_setup.sh
 USER root
